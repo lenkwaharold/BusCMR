@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BusCMR | Travel Smart, Travel Safe</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR-->
+    <header>
+        <nav class="navbar">
+
+            <!-- Logo -->
+            <div class="logo-section">
+                <a href="index.html" class="logo">
+    <img src="images/buscmr-logo.png" alt="BusCMR Logo">
+</a>
+
+                <div>
+                    <h2>BusCMR</h2>
+                    <p>Travel Smart, Travel Safe</p>
+                </div>
+            </div>
+
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="routes.html">Routes</a></li>
+                <li><a href="home.html">Buses</a></li>
+                <li><a href="agencies.html">Agencies</a></li>
+                <li><a href="#">My Bookings</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+
+
+            <!-- Authentication Buttons -->
+            <div class="nav-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!--  HERO SECTION-->
+    <section class="hero">
+
+        <!-- Dark/light overlay helps text appear clearly -->
+        <div class="hero-overlay"></div>
+
+        <div class="hero-container">
+
+            <!-- Left Side Text -->
+            <div class="hero-content">
+
+                <p class="welcome-text">WELCOME TO BUSCMR</p>
+
+                <h1>
+                    Travel Across <br>
+                    <span>Cameroon</span> with Ease
+                </h1>
+
+                <p class="hero-description">
+                    Book bus tickets online, compare prices, and travel
+                    comfortably with trusted agencies.
+                </p>
+
+
+                <!-- Features -->
+                <div class="hero-features">
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <div>
+                            <h3>Safe & Reliable</h3>
+                            <p>Travel safely with trusted agencies.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-ticket"></i>
+                        </div>
+
+                        <div>
+                            <h3>Best Prices</h3>
+                            <p>Compare and get the best deals.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-chair"></i>
+                        </div>
+
+                        <div>
+                            <h3>Comfortable Seats</h3>
+                            <p>Relax and travel comfortably.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FIND YOUR NEXT TRIP-->
+    <section class="search-section">
+
+        <div class="search-box">
+
+            <h2>Find your next trip</h2>
+
+            <div class="search-form">
+
+
+                <!-- From -->
+                <div class="form-group">
+                    <label for="from">From</label>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <select id="from">
+                            <option value="">Select origin</option>
+                            <option>Yaoundé</option>
+                            <option>Douala</option>
+                            <option>Bamenda</option>
+                            <option>Bafoussam</option>
+                            <option>Garoua</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <!-- Swap Icon -->
+                <div class="swap-icon">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+
+
+                <!-- To -->
+                <div class="form-group">
+                    <label for="to">To</label>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <select id="to">
+                            <option value="">Select destination</option>
+                            <option>Yaoundé</option>
+                            <option>Douala</option>
+                            <option>Bamenda</option>
+                            <option>Bafoussam</option>
+                            <option>Garoua</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <!-- Date -->
+                <div class="form-group">
+                    <label for="date">Date</label>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-calendar"></i>
+                        <input type="date" id="date">
+                    </div>
+                </div>
+
+
+                <!-- Passengers -->
+                <div class="form-group">
+                    <label for="passengers">Passengers</label>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-user"></i>
+
+                        <select id="passengers">
+                            <option>1 Passenger</option>
+                            <option>2 Passengers</option>
+                            <option>3 Passengers</option>
+                            <option>4 Passengers</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <!-- Search Button -->
+                <button class="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Search Buses
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--  POPULAR ROUTES -->
+    <section class="popular-routes">
+
+        <div class="section-header">
+            <h2>Popular Routes</h2>
+            <a href="routes.html">View all routes <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+
+        <div class="route-container">
+
+            <!-- Route 1 -->
+            <div class="route-card">
+                <img src="images/yaounde.jpg" alt="Yaoundé">
+
+                <div class="route-info">
+                    <h3>
+                        Yaoundé
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        Douala
+                    </h3>
+
+                    <div class="route-details">
+                        <span>From 5,000 FCFA</span>
+                        <span><i class="fa-regular fa-clock"></i> 4h 30m</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Route 2 -->
+            <div class="route-card">
+                <img src="images/douala.jpg" alt="Douala">
+
+                <div class="route-info">
+                    <h3>
+                        Douala
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        Bamenda
+                    </h3>
+
+                    <div class="route-details">
+                        <span>From 6,500 FCFA</span>
+                        <span><i class="fa-regular fa-clock"></i> 8h 15m</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Route 3 -->
+            <div class="route-card">
+                <img src="images/bamenda.jpg" alt="Bamenda">
+
+                <div class="route-info">
+                    <h3>
+                        Yaoundé
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        Bafoussam
+                    </h3>
+
+                    <div class="route-details">
+                        <span>From 4,000 FCFA</span>
+                        <span><i class="fa-regular fa-clock"></i> 4h 00m</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Route 4 -->
+            <div class="route-card">
+                <img src="images/garoua.jpg" alt="Garoua">
+
+                <div class="route-info">
+                    <h3>
+                        Douala
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        Garoua
+                    </h3>
+
+                    <div class="route-details">
+                        <span>From 10,000 FCFA</span>
+                        <span><i class="
+                        <!-- Book Anytime, Anywhere Banner -->
+<section class="booking-banner">
+
+    <!-- Bus image -->
+    <div class="booking-image">
+        <img src="images/bus-background.png" alt="BusCMR Bus">
+    </div>
+
+    <!-- Banner text -->
+    <div class="booking-content">
+        <h2>Book Anytime, Anywhere</h2>
+
+        <p>
+            Quick, easy and secure bus bookings at your fingertips.
+            Find your preferred route and travel with confidence.
+        </p>
+    </div>
+
+    <!-- Decoration -->
+    <div class="booking-decoration">
+        🚌
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+    <p>BusCMR 2026</p>
+</footer>
+<script  src="script.js"></script>
+
+</body>

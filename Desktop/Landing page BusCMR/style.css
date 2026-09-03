@@ -1,0 +1,547 @@
+/*BUSCMR LANDING PAGE - STYLE.CSS*/
+
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #1f2937;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/*   NAVBAR*/
+
+.navbar {
+    width: 100%;
+    min-height: 90px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    gap: 20px;
+}
+
+/* Logo section */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #123b7a;
+}
+
+.logo-icon {
+    font-size: 38px;
+}
+
+.logo-section h2 {
+    font-size: 28px;
+    color: #123b7a;
+}
+
+.logo-section p {
+    font-size: 11px;
+    color: #374151;
+    margin-top: 2px;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #1f2937;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #174ea6;
+    border-bottom: 3px solid #174ea6;
+}
+
+/* Login and Sign Up buttons */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-btn,
+.signup-btn {
+    padding: 11px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login-btn {
+    color: #174ea6;
+    border: 1px solid #174ea6;
+}
+
+.login-btn:hover {
+    background-color: #eef4ff;
+}
+
+.signup-btn {
+    background-color: #174ea6;
+    color: white;
+}
+
+.signup-btn:hover {
+    background-color: #102f6b;
+}
+
+
+/*  HERO SECTION*/
+.hero {
+    min-height: 430px;
+    position: relative;
+
+    background-image: 
+        linear-gradient(
+            to right,
+            rgba(235, 242, 250, 0.95) 0%,
+            rgba(235, 242, 250, 0.88) 40%,
+            rgba(235, 242, 250, 0.35) 65%,
+            rgba(235, 242, 250, 0.05) 100%
+        ),
+        url("./images/bus.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+}
+/* Hero content container */
+.hero-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 50px 5%;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    width: 55%;
+}
+
+/* Welcome text */
+.welcome-text {
+    font-size: 12px;
+    font-weight: bold;
+    color: #174ea6;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Main hero heading */
+.hero-content h1 {
+    font-size: 50px;
+    line-height: 1.15;
+    color: #102b5c;
+    margin-bottom: 18px;
+}
+
+.hero-content h1 span {
+    color: #174ea6;
+}
+
+/* Description */
+.hero-description {
+    max-width: 500px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #374151;
+    margin-bottom: 30px;
+}
+
+
+/*  HERO FEATURES */
+
+.hero-features {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 180px;
+}
+
+.feature-icon {
+    font-size: 25px;
+    color: #174ea6;
+    padding-top: 2px;
+}
+
+.feature h3 {
+    font-size: 13px;
+    color: #1f2937;
+    margin-bottom: 6px;
+}
+
+.feature p {
+    font-size: 11px;
+    line-height: 1.5;
+    color: #6b7280;
+}
+
+
+/*  SEARCH SECTION */
+
+.search-section {
+    padding: 0 5%;
+    position: relative;
+    margin-top: -25px;
+    z-index: 5;
+}
+
+.search-box {
+    background-color: white;
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.search-box h2 {
+    color: #102b5c;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.search-form {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.input-box {
+    height: 48px;
+    border: 1px solid #d1d5;
+}
+.route-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.route-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    min-height: 210px;
+}
+
+.route-card img {
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+}
+
+.route-info {
+    padding: 15px;
+}
+
+.route-info h3 {
+    color: #1f2937;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.route-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 11px;
+    color: #6b7280;
+}
+/*  APP BANNER*/
+
+.app-banner {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 0 5%;
+}
+
+.app-content {
+    min-height: 190px;
+    background: linear-gradient(135deg, #123b7a, #174ea6);
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 25px 8%;
+    gap: 40px;
+}
+
+.app-phone {
+    font-size: 100px;
+}
+
+.app-text h2 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.app-text p {
+    max-width: 500px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.store-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.store-btn {
+    background-color: #111827;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.store-btn i {
+    font-size: 25px;
+}
+
+.store-btn small {
+    display: block;
+    font-size: 8px;
+}
+
+.search-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/*  BOOK ANYTIME, ANYWHERE */
+
+.app-banner {
+    width: 100%;
+    padding: 20px 5px;
+    background-color: #f5f7fb;
+}
+
+.app-content {
+    max-width: 1200px;
+    height: 190px;
+    margin: auto;
+    background: #123b7a;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 20px 45px;
+    gap: 45px;
+    overflow: hidden;
+}
+
+.app-phone {
+    font-size: 115px;
+    color: white;
+    width: 140px;
+    text-align: center;
+}
+
+.app-text {
+    flex: 1;
+    color: white;
+}
+
+.app-text h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.app-text p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    color: #dbeafe;
+}
+
+.store-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.store-btn {
+    background: #111;
+    color: white;
+    min-width: 135px;
+    padding: 8px 14px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.store-btn i {
+    font-size: 25px;
+}
+
+.store-btn span {
+    font-size: 14px;
+}
+
+.store-btn small {
+    display: block;
+    font-size: 8px;
+}
+/*  FOOTER */
+
+footer {
+    background: #102f6b;
+    color: white;
+    padding: 40px 5% 15px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+    gap: 50px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo > i {
+    font-size: 38px;
+}
+
+.footer-logo h2 {
+    font-size: 24px;
+    color: white;
+}
+
+.footer-logo p {
+    font-size: 11px;
+    color: #dbeafe;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.footer-column h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.footer-column a,
+.footer-column p {
+    color: #dbeafe;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.footer-column a:hover {
+    color:white;
+}
+
+.footer-column p i {
+    width: 20px;
+}
+
+.copyright {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.copyright p {
+    font-size: 12px;
+    color: #dbeafe;
+}
+.logo img {
+    width: 130px;
+    height: auto;
+    display: block;
+}
