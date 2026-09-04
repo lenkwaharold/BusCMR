@@ -1,0 +1,307 @@
+@import url('home.css');
+
+/* PAGE HEADER */
+.page-header {
+  background: #e0f2fe;
+  padding: 2.5rem 5%;
+  position: relative;
+  border-bottom: 1px solid #bae6fd;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  color: var(--text-dark, #0f172a);
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: var(--text-muted, #64748b);
+}
+
+.filter-card {
+  background: #ffffff;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  margin-top: 1.5rem;
+  max-width: 950px;
+  flex-wrap: wrap;
+}
+
+.filter-card .field-group {
+  flex: 1;
+  min-width: 180px;
+}
+
+.filter-card label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: #334155;
+}
+
+.filter-card input,
+.filter-card select {
+  width: 100%;
+  padding: 0.65rem;
+  border: 1px solid var(--border-color, #cbd5e1);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* BUS LIST GRID LAYOUT (5 Columns = 4 Rows for 20 Cards) */
+.bus-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.bus-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.bus-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.bus-image-placeholder {
+  width: 100%;
+  height: 140px;
+  background: #e2e8f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.bus-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bus-type-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.bus-type-badge.vip {
+  background: #d97706;
+}
+
+.bus-details {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bus-details h3 {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+  color: var(--text-dark, #0f172a);
+}
+
+.bus-amenities {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-muted, #64748b);
+  margin: 0.5rem 0;
+  flex-wrap: wrap;
+}
+
+.bus-price-col {
+  padding: 1rem;
+  border-top: 1px solid var(--border-color, #e2e8f0);
+  text-align: center;
+  background: #fafafa;
+}
+
+.bus-price-col h3 {
+  font-size: 1.1rem;
+  margin-top: 0.25rem;
+}
+
+/* BUS DETAILS & SEAT MAP LAYOUT */
+.booking-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.seat-map-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.bus-front-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text-muted, #64748b);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.seats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 45px);
+  gap: 12px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.seat {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, #cbd5e1);
+  background: #f8fafc;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.seat.first-class {
+  background: #e0f2fe;
+  border-color: #7dd3fc;
+}
+
+.seat.economy-class {
+  background: #f1f5f9;
+}
+
+.seat.booked {
+  background: #ef4444;
+  color: #ffffff;
+  cursor: not-allowed;
+  border-color: #dc2626;
+}
+
+.seat.selected {
+  background: var(--primary, #0052cc);
+  color: #ffffff;
+  border-color: var(--primary, #0052cc);
+}
+
+.seat-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+}
+
+/* PAYMENT MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.pay-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.pay-option {
+  border: 1px solid var(--border-color, #cbd5e1);
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.pay-option.selected {
+  border-color: var(--primary, #0052cc);
+  background: #eff6ff;
+  color: var(--primary, #0052cc);
+}
+
+/* RESPONSIVE LAYOUT BREAKPOINTS */
+@media (max-width: 1200px) {
+  .bus-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .bus-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .bus-list {
+    grid-template-columns: 1fr;
+  }
+}
