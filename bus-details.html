@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BusCMR - Select Seats & Book</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="buses.css">
+</head>
+<body>
+
+  <!-- NAVIGATION HEADER -->
+  <header>
+    <div class="logo">
+      Bus<span>CMR</span>
+      <small>Travel Smart, Travel Safe</small>
+    </div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="routes.html">Routes</a>
+      <a href="buses.html">Buses</a>
+      <a href="agencies.html">Agencies</a>
+      <a href="#">My Bookings</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- SEAT SELECTION SECTION -->
+  <section class="section">
+    <div style="margin-bottom: 1.5rem;">
+      <a href="buses.html" style="color: var(--primary); text-decoration: none; font-weight: 600;">&larr; Back to Buses</a>
+    </div>
+
+    <h2 id="bus-title-header">Loading Bus Details...</h2>
+    <p id="bus-agency-subtitle" style="color: var(--text-muted); margin-bottom: 2rem;"></p>
+
+    <div class="booking-layout">
+      <!-- Interactive Bus Seat Grid Map -->
+      <div class="seat-map-card">
+        <div class="bus-front-label">--- FRONT OF BUS (DRIVER) ---</div>
+        
+        <div class="seats-grid" id="seat-grid-container">
+          <!-- Interactive seats generated via bus-details.js -->
+        </div>
+
+        <div class="seat-legend">
+          <div class="legend-item"><div class="legend-dot" style="background:#e0f2fe;"></div> First Class</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#f1f5f9;"></div> Economy</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#ef4444;"></div> Booked</div>
+          <div class="legend-item"><div class="legend-dot" style="background:var(--primary);"></div> Selected</div>
+        </div>
+      </div>
+
+      <!-- Booking Fare Summary -->
+      <div style="background: #fff; border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; height: fit-content;">
+        <h3>Fare Summary</h3>
+        <hr style="margin: 1rem 0; border: 0; border-top: 1px solid var(--border-color);">
+        <p>Selected Seat: <strong id="selected-seat-no">None</strong></p>
+        <p style="margin-top: 0.5rem;">Seat Tier: <strong id="selected-seat-tier">N/A</strong></p>
+        <p style="margin-top: 0.5rem;">Ticket Price: <strong id="ticket-price">0 FCFA</strong></p>
+        <hr style="margin: 1rem 0; border: 0; border-top: 1px solid var(--border-color);">
+        <button id="open-pay-btn" class="btn-primary btn-block" disabled>Proceed to Payment</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOBILE MONEY PAYMENT MODAL -->
+  <div class="modal" id="payment-modal">
+    <div class="modal-content">
+      <h3>Select Payment Method</h3>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Complete your bus reservation securely</p>
+
+      <div class="pay-options">
+        <div class="pay-option selected" data-method="MTN">🟡 MTN MoMo</div>
+        <div class="pay-option" data-method="Orange">🟠 Orange Money</div>
+      </div>
+
+      <div class="field-group" style="margin-top:1rem;">
+        <label for="pay-phone">Mobile Money Number</label>
+        <input type="tel" id="pay-phone" placeholder="e.g. 670000000">
+      </div>
+
+      <button id="confirm-pay-btn" class="btn-primary btn-block" style="margin-top:1.25rem;">Confirm & Pay Ticket</button>
+      <button id="close-modal-btn" style="width:100%; margin-top:0.5rem; background:none; border:none; color:var(--text-muted); cursor:pointer;">Cancel</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="copyright">© 2026 BusCMR. All rights reserved.</p>
+  </footer>
+
+  <script src="agency-bus-data.js"></script>
+  <script src="bus-details.js"></script>
+</body>
+</html>

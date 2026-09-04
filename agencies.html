@@ -1,1 +1,49 @@
-<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>BusCMR - Agencies</title><link rel='stylesheet' href='css/style.css'></head><body><header><h2>BusCMR</h2></header><div class='container'><div class='card'><h3>Agencies Page</h3><p>Starter template for agencies.html</p></div></div><script src='js/agencies.js'></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BusCMR - Bus Agencies</title>
+  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/buses.css">
+</head>
+<body>
+
+  <!-- NAVIGATION HEADER -->
+  <header>
+    <div class="logo">
+      Bus<span>CMR</span>
+      <small>Travel Smart, Travel Safe</small>
+    </div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="routes.html">Routes</a>
+      <a href="buses.html">Buses</a>
+      <a href="agencies.html" class="active">Agencies</a>
+      <a href="#">My Bookings</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <h1>Trusted Bus Agencies</h1>
+    <p>Compare agency ratings, fleet options, and book directly with top Cameroon transport providers.</p>
+  </div>
+
+  <!-- AGENCY GRID -->
+  <section class="section">
+    <div class="bus-list" id="agency-container">
+      <!-- Dynamic Agency Cards rendered via agencies.js -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="copyright">© 2026 BusCMR. All rights reserved.</p>
+  </footer>
+
+  <script src="./js/agency-bus-data.js"></script>
+  <script src="./js/agencies.js"></script>
+</body>
+</html>
