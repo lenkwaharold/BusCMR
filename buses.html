@@ -1,1 +1,79 @@
-<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>BusCMR - Buses</title><link rel='stylesheet' href='css/style.css'></head><body><header><h2>BusCMR</h2></header><div class='container'><div class='card'><h3>Buses Page</h3><p>Starter template for buses.html</p></div></div><script src='js/buses.js'></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BusCMR - Available Buses</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="routes.css">
+  <link rel="stylesheet" href="buses.css">
+</head>
+<body>
+
+  <!-- NAVIGATION HEADER -->
+  <header>
+    <div class="logo">
+      Bus<span>CMR</span>
+      <small>Travel Smart, Travel Safe</small>
+    </div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="routes.html">Routes</a>
+      <a href="buses.html" class="active">Buses</a>
+      <a href="agencies.html">Agencies</a>
+      <a href="#">My Bookings</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER & FILTER BAR -->
+  <div class="page-header">
+    <h1 id="buses-page-title">Available Buses</h1>
+    <p>Find and book comfortable buses for your next trip across Cameroon.</p>
+
+    <div class="filter-card">
+      <div class="field-group">
+        <label for="agency-filter-select">Filter by Agency</label>
+        <select id="agency-filter-select">
+          <option value="ALL">All Agencies</option>
+        </select>
+      </div>
+
+      <div class="field-group">
+        <label for="route-filter-select">Filter by Route</label>
+        <select id="route-filter-select">
+          <option value="ALL">All Routes</option>
+          <option value="yd-dl">Yaoundé ➔ Douala</option>
+          <option value="dl-bm">Douala ➔ Bamenda</option>
+          <option value="yd-bf">Yaoundé ➔ Bafoussam</option>
+          <option value="dl-kb">Douala ➔ Kribi</option>
+        </select>
+      </div>
+
+      <div class="field-group">
+        <label for="sort-select">Sort By</label>
+        <select id="sort-select">
+          <option value="popular">Popular</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUS LIST CONTAINER (Renders 20 cards arranged across 4 rows) -->
+  <section class="section">
+    <div class="bus-list" id="bus-container">
+      <!-- Generated dynamically by buses.js -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="copyright">© 2026 BusCMR. All rights reserved.</p>
+  </footer>
+
+  <script src="agency-bus-data.js"></script>
+  <script src="buses.js"></script>
+</body>
+</html>

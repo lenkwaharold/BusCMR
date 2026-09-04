@@ -1,1 +1,147 @@
-<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>BusCMR - Routes</title><link rel='stylesheet' href='css/style.css'></head><body><header><h2>BusCMR</h2></header><div class='container'><div class='card'><h3>Routes Page</h3><p>Starter template for routes.html</p></div></div><script src='js/routes.js'></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BusCMR - Travel Routes</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="routes.css">
+</head>
+<body>
+
+  <!-- NAVIGATION HEADER -->
+  <header>
+    <div class="logo">
+      Bus<span>CMR</span>
+      <small>Travel Smart, Travel Safe</small>
+    </div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="routes.html" class="active">Routes</a>
+      <a href="buses.html">Buses</a>
+      <a href="agencies.html">Agencies</a>
+      <a href="#">My Bookings</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER & FILTER SECTION -->
+  <div class="page-header">
+    <h1>Explore Travel Routes</h1>
+    <p>Find bus connections and check daily operational schedules across Cameroon.</p>
+
+    <div class="filter-card">
+      <div class="field-group">
+        <label for="route-search">Search Route</label>
+        <input type="text" id="route-search" placeholder="Type a city name (e.g. Douala)...">
+      </div>
+      <div class="field-group">
+        <label for="region-filter">Filter by Region</label>
+        <select id="region-filter">
+          <option value="">All Regions</option>
+          <option value="centre">Centre Region</option>
+          <option value="littoral">Littoral Region</option>
+          <option value="west">West Region</option>
+          <option value="northwest">North-West Region</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROUTE STRIPS SECTION -->
+  <section class="section">
+    <div class="route-list">
+      <div class="route-strip">
+        <img src="images/routes/yaounde-douala.jpg" alt="Yaoundé to Douala" class="route-strip-img">
+        <div class="origin">
+          <strong>Yaoundé</strong>
+          <span>Mvan Terminal</span>
+        </div>
+        <div class="trip-info">
+          <span class="arrows">➔</span>
+          <span class="duration">4 hrs 30 mins</span>
+        </div>
+        <div class="destination">
+          <strong>Douala</strong>
+          <span>Akwa / Bonaberi</span>
+        </div>
+        <div class="pricing">
+          <small>Starting from</small>
+          <h4>5,000 FCFA</h4>
+        </div>
+        <a href="buses.html?route=yd-dl" class="btn-primary action-btn">View Buses</a>
+      </div>
+
+      <div class="route-strip">
+        <img src="images/routes/douala-bamenda.jpg" alt="Douala to Bamenda" class="route-strip-img">
+        <div class="origin">
+          <strong>Douala</strong>
+          <span>Akwa Agency</span>
+        </div>
+        <div class="trip-info">
+          <span class="arrows">➔</span>
+          <span class="duration">6 hrs 00 mins</span>
+        </div>
+        <div class="destination">
+          <strong>Bamenda</strong>
+          <span>Commercial Avenue</span>
+        </div>
+        <div class="pricing">
+          <small>Starting from</small>
+          <h4>7,000 FCFA</h4>
+        </div>
+        <a href="buses.html?route=dl-bm" class="btn-primary action-btn">View Buses</a>
+      </div>
+
+      <div class="route-strip">
+        <img src="images/routes/yaounde-bafoussam.jpg" alt="Yaoundé to Bafoussam" class="route-strip-img">
+        <div class="origin">
+          <strong>Yaoundé</strong>
+          <span>Etoudi Station</span>
+        </div>
+        <div class="trip-info">
+          <span class="arrows">➔</span>
+          <span class="duration">5 hrs 15 mins</span>
+        </div>
+        <div class="destination">
+          <strong>Bafoussam</strong>
+          <span>Marché A Park</span>
+        </div>
+        <div class="pricing">
+          <small>Starting from</small>
+          <h4>6,000 FCFA</h4>
+        </div>
+        <a href="buses.html?route=yd-bf" class="btn-primary action-btn">View Buses</a>
+      </div>
+
+      <div class="route-strip">
+        <img src="images/routes/douala-kribi.jpg" alt="Douala to Kribi" class="route-strip-img">
+        <div class="origin">
+          <strong>Douala</strong>
+          <span>Yassa Park</span>
+        </div>
+        <div class="trip-info">
+          <span class="arrows">➔</span>
+          <span class="duration">3 hrs 00 mins</span>
+        </div>
+        <div class="destination">
+          <strong>Kribi</strong>
+          <span>Town Center</span>
+        </div>
+        <div class="pricing">
+          <small>Starting from</small>
+          <h4>4,000 FCFA</h4>
+        </div>
+        <a href="buses.html?route=dl-kb" class="btn-primary action-btn">View Buses</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="copyright">© 2026 BusCMR. All rights reserved.</p>
+  </footer>
+
+  <script src="routes.js"></script>
+</body>
+</html>
