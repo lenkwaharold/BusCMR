@@ -2,15 +2,16 @@
 
 /* PAGE HEADER */
 .page-header {
-  background: #e0f2fe;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   padding: 2.5rem 5%;
   position: relative;
   border-bottom: 1px solid #bae6fd;
+  height: 400px;
 }
 
 .page-header h1 {
   font-size: 2rem;
-  color: var(--text-dark, #0f172a);
+  color:  #d6d9e0;
   margin-bottom: 0.5rem;
 }
 
